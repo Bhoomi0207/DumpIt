@@ -7,9 +7,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import androidx.appcompat.widget.AppCompatButton
+import com.example.dumpit.Activities.HomeActivity
 import com.example.dumpit.R
 import com.google.firebase.auth.FirebaseAuth
-
 
 class LoginActivity : AppCompatActivity() {
 
@@ -68,7 +68,7 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     showToast("Login successful")
-                  //val intent = Intent(this, HomeActivity::class.java)
+                    val intent = Intent(this, HomeActivity::class.java)
                     startActivity(intent)
                     finish() // Finish LoginActivity to prevent going back to it using the back button
                 } else {
