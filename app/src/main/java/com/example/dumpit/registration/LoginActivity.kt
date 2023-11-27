@@ -10,6 +10,7 @@ import androidx.appcompat.widget.AppCompatButton
 import com.example.dumpit.R
 import com.google.firebase.auth.FirebaseAuth
 
+
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var usernameEditText: MaterialAutoCompleteTextView

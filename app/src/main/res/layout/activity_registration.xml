@@ -56,7 +56,7 @@
                 android:gravity="center"
                 android:maxLines="1"
                 android:padding="4dp"
-                android:contentDescription="@string/gender_spinner_description"
+                android:contentDescription="gender_spinner_description"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"

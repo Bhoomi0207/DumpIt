@@ -4,11 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Looper
-import com.example.dumpit.MainActivity
+
 import com.example.dumpit.R
 import android.os.Handler
 import com.example.dumpit.Activities.HomeActivity
-
+import com.example.dumpit.MainActivity
 
 
 class splashscreen : AppCompatActivity() {
