@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "861580722679",
+    "project_id": "dumpit-2f4ce",
+    "storage_bucket": "dumpit-2f4ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861580722679:android:17d41c66b76d7615ef2ef2",
+        "android_client_info": {
+          "package_name": "com.example.dumpit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDH_wPi3snyqIC-UDqV-0JyNXzom0llqD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861580722679:android:9ea33ab8f3da3368ef2ef2",
+        "android_client_info": {
+          "package_name": "com.example.dumpit.registration"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDH_wPi3snyqIC-UDqV-0JyNXzom0llqD4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
