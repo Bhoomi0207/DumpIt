@@ -67,7 +67,7 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     showToast("Login successful")
-                   // val intent = Intent(this, HomeActivity::class.java)
+                  //val intent = Intent(this, HomeActivity::class.java)
                     startActivity(intent)
                     finish() // Finish LoginActivity to prevent going back to it using the back button
                 } else {
