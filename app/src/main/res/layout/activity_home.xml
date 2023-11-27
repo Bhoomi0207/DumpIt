@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#674319"
+    android:orientation="vertical"
+    tools:context=".Activities.HomeActivity">
+
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Welcome to"
+        android:gravity="center"
+        android:layout_marginLeft="100dp"
+        android:textColor="#2F8309"
+        android:textSize="30sp"
+        />
+
+    <TextView
+        android:id="@+id/appNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="DumpIt"
+        android:layout_marginLeft="100dp"
+        android:textColor="#2F8309"
+        android:textSize="43sp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/biodegradable_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:background="@drawable/gradient_button"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center"
+        android:padding="10sp"
+        android:text="Biodegradable Waste"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        tools:ignore="VisualLintButtonSize,TextContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nonBiodegradable_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:background="@drawable/gradient_button"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center"
+        android:padding="10sp"
+        android:text="Non Biodegradable Waste"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/chemical_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:background="@drawable/gradient_button"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center"
+        android:padding="10sp"
+        android:text="Chemical waste"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/indusrial_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:background="@drawable/gradient_button"
+        android:fontFamily="@font/montserrat_semibold"
+        android:gravity="center"
+        android:padding="10sp"
+        android:text="Industrial waste"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+
+
+
+
+
+
+</LinearLayout>
