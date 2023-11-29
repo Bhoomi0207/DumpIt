@@ -53,7 +53,7 @@ class HomeActivity : AppCompatActivity() {
         val dialogBuilder = AlertDialog.Builder(this)
         dialogBuilder.setTitle("Non Biodegradable Waste List")
 
-        val items = NonBiodegradableItemsDataSource.nonbiodegradableItems
+        val items = NonBiodegradableItemsDataSource.nonBiodegradableItems
             .map { "${it.name}: \$${it.pricePerKg} per kg" }
             .toTypedArray()
 

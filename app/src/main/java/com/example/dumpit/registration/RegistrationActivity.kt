@@ -51,10 +51,12 @@ class RegistrationActivity : AppCompatActivity() {
             val email = emailEditText.text.toString()
             val password = passwordEditText.text.toString()
             val confirmPassword = confirmPasswordEditText.text.toString()
-            val gender = genderSpinner.selectedItem.toString()
+
+            // Retrieve selected gender from Spinner
+            val selectedGender: String = genderSpinner.selectedItem?.toString() ?: ""
 
             // Validate user input (add your own validation logic)
-            if (isValidInput(fullName, address, username, email, password, confirmPassword, gender)) {
+            if (isValidInput(fullName, address, username, email, password, confirmPassword, selectedGender)) {
                 // Register the user using Firebase Authentication
                 registerUser(email, password)
             } else {
@@ -80,12 +82,14 @@ class RegistrationActivity : AppCompatActivity() {
     ): Boolean {
         // Add your validation logic here
         // For example, you might check if the fields are not empty and if passwords match
+
         return fullName.isNotEmpty() &&
                 address.isNotEmpty() &&
                 username.isNotEmpty() &&
                 email.isNotEmpty() &&
                 password.isNotEmpty() &&
                 confirmPassword.isNotEmpty() &&
+                gender.isNotEmpty() &&
                 password == confirmPassword
     }
 
@@ -98,7 +102,7 @@ class RegistrationActivity : AppCompatActivity() {
                     // You can add additional logic here, such as navigating to the home screen
                 } else {
                     // If registration fails, display a message to the user.
-                    showToast("Registration failed. Please try again.")
+                    showToast("Registration failed. ${task.exception?.message}")
                 }
             }
     }

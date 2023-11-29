@@ -60,7 +60,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/registerUsernameEditText" />
+                app:layout_constraintTop_toBottomOf="@+id/registerUsernameEditText"
+                android:entries="@array/gender_options" />
+
+
 
             <com.google.android.material.textfield.MaterialAutoCompleteTextView
                 android:id="@+id/fullNameEditText"

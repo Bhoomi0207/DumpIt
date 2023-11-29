@@ -14,20 +14,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="8dp"
-        android:fontFamily="@font/montserrat_semibold"
         android:text="Welcome to"
         android:gravity="center"
         android:layout_marginLeft="100dp"
         android:textColor="#C8F4B4"
-    android:textSize="30sp"
-        />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/appNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:elevation="8dp"
-        android:fontFamily="@font/montserrat_semibold"
         android:text="DumpIt"
         android:layout_marginLeft="100dp"
         android:textColor="#C8F4B4"
@@ -81,7 +78,7 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/indusrial_Button"
+        android:id="@+id/industrial_Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
@@ -89,15 +86,9 @@
 
         android:gravity="center"
         android:padding="10sp"
-        android:text="Chemical Waste"
+        android:text="Industrial Waste"
         android:textColor="@color/black"
         android:textSize="20sp"
         tools:ignore="TextContrastCheck,VisualLintButtonSize" />
-
-
-
-
-
-
 
 </LinearLayout>
