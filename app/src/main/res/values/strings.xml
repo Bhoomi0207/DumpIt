@@ -8,5 +8,9 @@
     <string name="username">  Username</string>
     <string name="welcome_to">Welcome to</string>
     <string name="gender_spinner_description">Select your gender</string>
-
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Others</item>
+    </string-array>
 </resources>

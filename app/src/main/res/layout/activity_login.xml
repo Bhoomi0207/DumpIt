@@ -58,7 +58,7 @@
                 android:background="@drawable/edit_text_bg"
                 android:drawableStart="@drawable/person"
                 android:elevation="8dp"
-                android:hint="@string/username"
+                android:hint="Email"
                 android:inputType="text"
                 android:paddingStart="8dp"
                 android:paddingTop="16dp"
