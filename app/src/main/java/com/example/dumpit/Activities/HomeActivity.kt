@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.AppCompatButton
-import com.example.dumpit.Model.BiodegradableItem
+
 import com.example.dumpit.Model.BiodegradableItemsDataSource
 import com.example.dumpit.Model.NonBiodegradableItemsDataSource
 import com.example.dumpit.R
