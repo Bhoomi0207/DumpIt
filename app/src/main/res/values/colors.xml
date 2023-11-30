@@ -22,4 +22,5 @@
     <color name="colorSecondary">#ebdcca</color>
     <color name="my_spinner_text_color">#72000000</color>
     <color name="colorSecondaryDark">#66DFA661</color>
+    <color name="btncolor">#18BA1E</color>
 </resources>

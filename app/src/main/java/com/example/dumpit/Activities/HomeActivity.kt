@@ -1,77 +1,59 @@
 package com.example.dumpit.Activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
-import com.example.dumpit.Model.BiodegradableItem
-import com.example.dumpit.Model.BiodegradableItemsDataSource
-import com.example.dumpit.Model.NonBiodegradableItemsDataSource
+import com.example.dumpit.Model.*
 import com.example.dumpit.R
 
 class HomeActivity : AppCompatActivity() {
-    val biodegradableButton: AppCompatButton by lazy {
+    private val biodegradableButton: AppCompatButton by lazy {
         findViewById(R.id.biodegradable_Button)
     }
-    val nonBiodegradableButton: AppCompatButton by lazy {
+    private val nonBiodegradableButton: AppCompatButton by lazy {
         findViewById(R.id.nonBiodegradable_Button)
     }
-    override fun onCreate(savedInstanceState:Bundle?) {
+    private val chemicalButton: AppCompatButton by lazy {
+        findViewById(R.id.chemical_Button)
+    }
+    private val industrialButton: AppCompatButton by lazy {
+        findViewById(R.id.industrial_Button)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-
-       biodegradableButton.setOnClickListener {
-            showBiodegradableList()
+        biodegradableButton.setOnClickListener {
+            showItemList("Biodegradable Waste List", BiodegradableItemsDataSource.biodegradableItems)
         }
-    }
-
-    private fun showBiodegradableList() {
-        val dialogBuilder = AlertDialog.Builder(this)
-        dialogBuilder.setTitle("Biodegradable Waste List")
-
-        val items = BiodegradableItemsDataSource.biodegradableItems
-            .map { "${it.name}: \$${it.pricePerKg} per kg" }
-            .toTypedArray()
-
-        dialogBuilder.setItems(items) { dialog, which ->
-            // Handle item selection if needed
-        }
-
-        dialogBuilder.setPositiveButton("OK") { dialog, which ->
-            dialog.dismiss()
-        }
-
-        val dialog = dialogBuilder.create()
-        dialog.show()
 
         nonBiodegradableButton.setOnClickListener {
-            shownonBiodegradableList()
+            showItemList("Non Biodegradable Waste List", NonBiodegradableItemDataSource.nonBiodegradableItems)
+        }
+
+        chemicalButton.setOnClickListener {
+            showItemList("Chemical Waste List", ChemicalItemsDataSource.chemicalItems)
+        }
+
+        industrialButton.setOnClickListener {
+            showItemList("Industrial Waste List", IndustrialItemsDataSource.industrialItems)
         }
     }
-    private fun shownonBiodegradableList() {
+
+    private fun showItemList(title: String, items: List<Any>) {
         val dialogBuilder = AlertDialog.Builder(this)
-        dialogBuilder.setTitle("Non Biodegradable Waste List")
+        dialogBuilder.setTitle(title)
 
-        val items = NonBiodegradableItemsDataSource.nonBiodegradableItems
-            .map { "${it.name}: \$${it.pricePerKg} per kg" }
-            .toTypedArray()
+        val formattedItems = items.joinToString("\n") { it.toString() }
 
-        dialogBuilder.setItems(items) { dialog, which ->
-            // Handle item selection if needed
-        }
-
-        dialogBuilder.setPositiveButton("OK") { dialog, which ->
+        dialogBuilder.setMessage(formattedItems)
+        dialogBuilder.setPositiveButton("OK") { dialog, _ ->
             dialog.dismiss()
         }
 
         val dialog = dialogBuilder.create()
         dialog.show()
-
-
-
-
-
-
-}
+    }
 }

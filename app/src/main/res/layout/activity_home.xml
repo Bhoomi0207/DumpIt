@@ -91,4 +91,15 @@
         android:textSize="20sp"
         tools:ignore="TextContrastCheck,VisualLintButtonSize" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/order"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="55dp"
+        android:background="@color/btncolor"
+        android:gravity="center"
+        android:padding="10sp"
+        android:text="Request Order"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
 </LinearLayout>
