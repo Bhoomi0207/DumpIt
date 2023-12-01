@@ -68,7 +68,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
         android:background="#dbebc3 "
-
         android:gravity="center"
         android:padding="10sp"
         android:text="Chemical waste"

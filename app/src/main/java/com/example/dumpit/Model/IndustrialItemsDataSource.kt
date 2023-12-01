@@ -1,5 +1,4 @@
 package com.example.dumpit.Model
-
 object IndustrialItemsDataSource {
     val industrialItems = listOf(
         IndustrialItem("Factory Waste 1", 8.0),

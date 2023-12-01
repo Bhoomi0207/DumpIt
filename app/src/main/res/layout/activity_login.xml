@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#674319"
+    android:background="#7d774e"
     tools:context=".registration.LoginActivity">
 
 
@@ -27,7 +27,7 @@
                 android:layout_marginTop="120dp"
                 android:elevation="8dp"
                 android:text="@string/welcome_to"
-                android:textColor="#2F8309"
+                android:textColor="#C8F4B4"
                 android:textSize="30sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.487"
@@ -42,7 +42,7 @@
                 android:layout_marginTop="144dp"
                 android:elevation="8dp"
                 android:text="DumpIT"
-                android:textColor="#2F8309"
+                android:textColor="#C8F4B4"
                 android:textSize="40sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
@@ -105,13 +105,12 @@
                 android:layout_marginStart="64dp"
                 android:layout_marginTop="122dp"
                 android:layout_marginEnd="64dp"
-                 android:background="@drawable/gradient_button"
+                android:background="#43570C"
                 android:elevation="12dp"
-
                 android:paddingTop="16dp"
                 android:paddingBottom="16dp"
                 android:text="@string/login"
-                android:textColor="@color/colorSecondary"
+                android:textColor="#C8F4B4"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -128,7 +127,7 @@
                 android:focusable="true"
 
                 android:text="@string/do_not_have_an_account_create_one"
-                android:textColor="#2F8309"
+                android:textColor="#C8F4B4"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
