@@ -91,18 +91,33 @@
         tools:ignore="TextContrastCheck,VisualLintButtonSize" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/wastetype_Button"
+        android:id="@+id/information_Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20sp"
         android:background="#dbebc3 "
+        android:gravity="center"
+        android:padding="10sp"
+        android:text="Importance of Recycling"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/wastetype_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:background="#7FC615"
         android:gravity="center"
         android:padding="10sp"
         android:text="enter Waste"
         android:textColor="@color/black"
         android:textSize="20sp"
         tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/order"
@@ -115,4 +130,5 @@
         android:text="Request Order"
         android:textColor="@color/black"
         android:textSize="20sp" />
+
 </LinearLayout>
