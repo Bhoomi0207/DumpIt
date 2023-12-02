@@ -22,6 +22,10 @@ class HomeActivity : AppCompatActivity() {
     val industrialbutton: AppCompatButton by lazy {
         findViewById(R.id.industrial_Button)
     }
+
+    val information_button: AppCompatButton by lazy {
+        findViewById(R.id.information_Button)
+    }
     val input_wastebutton: AppCompatButton by lazy {
         findViewById(R.id.wastetype_Button)
     }
@@ -45,6 +49,12 @@ class HomeActivity : AppCompatActivity() {
         industrialbutton.setOnClickListener {
             shownonBiodegradableList()
         }
+        information_button.setOnClickListener {
+            val intent = Intent(this, InformationActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
         input_wastebutton.setOnClickListener {
             val intent = Intent(this, InputWasteActivity::class.java)
             startActivity(intent)
