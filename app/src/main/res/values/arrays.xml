@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="waste_categories">
+        <item>Recyclables</item>
+        <item>Organic Waste</item>
+        <item>General Waste</item>
+    </string-array>
+
+</resources>

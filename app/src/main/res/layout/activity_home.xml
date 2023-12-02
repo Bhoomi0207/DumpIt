@@ -91,6 +91,20 @@
         tools:ignore="TextContrastCheck,VisualLintButtonSize" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/wastetype_Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:background="#dbebc3 "
+
+        android:gravity="center"
+        android:padding="10sp"
+        android:text="enter Waste"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/order"
         android:layout_width="300dp"
         android:layout_height="wrap_content"

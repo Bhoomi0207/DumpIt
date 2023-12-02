@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#7d774e"
-    tools:context=".registration.RegistrationActivity">
+    tools:context=".Activities.InputWasteActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -37,7 +37,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="44dp"
                 android:elevation="8dp"
-                android:text="DumpIt"
+                android:text="DumpIT"
                 android:textColor="#C8F4B4"
                 android:textSize="43sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -60,9 +60,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/registerUsernameEditText"
-                android:entries="@array/gender_options" />
-
+                app:layout_constraintTop_toBottomOf="@+id/QuantityEditText"
+                android:entries="@array/waste_categories"
+                android:prompt="@string/select_waste_category" />
 
 
             <com.google.android.material.textfield.MaterialAutoCompleteTextView
@@ -74,8 +74,8 @@
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/edit_text_bg"
                 android:elevation="8dp"
-                android:hint="Full Name"
-                android:drawableStart="@drawable/person"
+                android:hint="Waste Name"
+
                 android:paddingStart="16dp"
                 android:paddingTop="0dp"
                 android:paddingEnd="0dp"
@@ -108,29 +108,31 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/spinnerWaste" />
 
-
             <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                android:id="@+id/registerUsernameEditText"
+                android:id="@+id/approx_priceEditText"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
-                android:drawableLeft="@drawable/person"
-                android:textColor="@color/black"
-                android:textColorHint="#72000000"
                 android:background="@drawable/edit_text_bg"
                 android:elevation="8dp"
-                android:hint="Username"
+                android:hint="Approx Price"
+                android:inputType="text"
                 android:paddingStart="16dp"
                 android:paddingTop="0dp"
                 android:paddingEnd="0dp"
                 android:paddingBottom="0dp"
+                android:textColor="@color/black"
+                android:textColorHint="#72000000"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/QuantityEditText"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/locationEditText" />
+
+
+
+
 
             <com.google.android.material.textfield.MaterialAutoCompleteTextView
                 android:id="@+id/QuantityEditText"
@@ -139,10 +141,9 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
-                android:drawableStart="@drawable/email"
                 android:background="@drawable/edit_text_bg"
                 android:elevation="8dp"
-                android:hint="Email"
+                android:hint="Quantity"
                 android:inputType="textEmailAddress"
                 android:paddingStart="16dp"
                 android:paddingTop="0dp"
@@ -156,89 +157,30 @@
                 app:layout_constraintTop_toBottomOf="@+id/Waste_typeEditText"
                 />
 
-
-
-            <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                android:id="@+id/approx_priceEditText"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
-                android:background="@drawable/edit_text_bg"
-                android:elevation="8dp"
-                android:drawableStart="@drawable/lock"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:paddingStart="16dp"
-                android:paddingTop="0dp"
-                android:paddingEnd="0dp"
-                android:paddingBottom="0dp"
-                android:textColor="@color/black"
-                android:textColorHint="#72000000"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/locationEditText" />
-
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/registerButton"
+                android:id="@+id/addwaste"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="64dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="64dp"
-                android:background="#43570C "
+                android:background="@drawable/gradient_button"
                 android:elevation="12dp"
                 android:paddingStart="16dp"
                 android:paddingTop="0dp"
                 android:paddingEnd="0dp"
                 android:paddingBottom="0dp"
-                android:text="register"
-                android:textColor="#C8F4B4"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/confirmPasswordEditText" />
-
-            <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                android:id="@+id/confirmPasswordEditText"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
-                android:background="@drawable/edit_text_bg"
-                android:elevation="8dp"
-                android:hint="Confirm Password"
-                android:inputType="textPassword"
-                android:drawableStart="@drawable/lock"
-                android:paddingStart="16dp"
-                android:paddingTop="0dp"
-                android:paddingEnd="0dp"
-                android:paddingBottom="0dp"
+                android:text="Add Waste"
                 android:textColor="@color/black"
-                android:textColorHint="#72000000"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/approx_priceEditText" />
 
-            <TextView
-                android:id="@+id/alreadyHasAccountTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:text="Already have an account! Login here"
-                 android:textColor="#C8F4B4"
-                android:textSize="14sp"
-                android:textColorHint="#72000000"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/registerButton"
-                tools:ignore="TouchTargetSizeCheck" />
+
+
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 

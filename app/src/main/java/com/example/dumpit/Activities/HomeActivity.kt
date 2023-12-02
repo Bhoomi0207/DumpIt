@@ -1,14 +1,13 @@
 package com.example.dumpit.Activities
 
+import android.content.Intent
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import android.os.Bundle
-import com.example.dumpit.Model.BiodegradableItemsDataSource
-import com.example.dumpit.Model.NonBiodegradableItemDataSource
-import com.example.dumpit.Model.ChemicalItemsDataSource
-import com.example.dumpit.Model.IndustrialItemsDataSource
+import com.example.dumpit.Model.*
 import com.example.dumpit.R
+import com.example.dumpit.registration.RegistrationActivity
 
 class HomeActivity : AppCompatActivity() {
     val biodegradableButton: AppCompatButton by lazy {
@@ -23,6 +22,10 @@ class HomeActivity : AppCompatActivity() {
     val industrialbutton: AppCompatButton by lazy {
         findViewById(R.id.industrial_Button)
     }
+    val input_wastebutton: AppCompatButton by lazy {
+        findViewById(R.id.wastetype_Button)
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +44,11 @@ class HomeActivity : AppCompatActivity() {
 
         industrialbutton.setOnClickListener {
             shownonBiodegradableList()
+        }
+        input_wastebutton.setOnClickListener {
+            val intent = Intent(this, InputWasteActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 
@@ -68,7 +76,7 @@ class HomeActivity : AppCompatActivity() {
         val dialogBuilder = AlertDialog.Builder(this)
         dialogBuilder.setTitle("Non Biodegradable Waste List")
 
-        val items = NonBiodegradableItemDataSource.nonBiodegradableItems
+        val items = BiodegradableItemsDataSource.biodegradableItems
             .map { "${it.name}: ₹${it.pricePerKg} per kg" }
             .toTypedArray()
 
