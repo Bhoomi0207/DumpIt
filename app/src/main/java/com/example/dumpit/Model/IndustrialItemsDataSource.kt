@@ -3,7 +3,7 @@ package com.example.dumpit.Model
 
 
 object IndustrialItemsDataSource {
-    val biodegradableItems = listOf(
+    val industrialItems= listOf(
         BiodegradableItem("Organic Fruit Peels", 2.0),
         BiodegradableItem("Vegetable Scraps", 1.5),
         BiodegradableItem("Compostable Coffee Grounds", 3.0),

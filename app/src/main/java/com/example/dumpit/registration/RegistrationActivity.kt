@@ -33,13 +33,13 @@ class RegistrationActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         // Initialize views
-        fullNameEditText = findViewById(R.id.fullNameEditText)
-        addressEditText = findViewById(R.id.addressEditText)
+        fullNameEditText = findViewById(R.id.Waste_typeEditText)
+        addressEditText = findViewById(R.id.locationEditText)
         usernameEditText = findViewById(R.id.registerUsernameEditText)
-        emailEditText = findViewById(R.id.registerEmailEditText)
-        passwordEditText = findViewById(R.id.registerPasswordEditText)
+        emailEditText = findViewById(R.id.QuantityEditText)
+        passwordEditText = findViewById(R.id.approx_priceEditText)
         confirmPasswordEditText = findViewById(R.id.confirmPasswordEditText)
-        genderSpinner = findViewById(R.id.spinnerGender)
+        genderSpinner = findViewById(R.id.spinnerWaste)
         registerButton = findViewById(R.id.registerButton)
         alreadyHasAccountTextView = findViewById(R.id.alreadyHasAccountTextView)
 

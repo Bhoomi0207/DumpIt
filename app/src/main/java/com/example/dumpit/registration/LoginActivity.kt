@@ -5,11 +5,14 @@ import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.textfield.MaterialAutoCompleteTextView
 import androidx.appcompat.widget.AppCompatButton
+import androidx.core.content.ContextCompat.startActivity
+import com.google.android.material.textfield.MaterialAutoCompleteTextView
+
 import com.example.dumpit.Activities.HomeActivity
 import com.example.dumpit.R
 import com.google.firebase.auth.FirebaseAuth
+
 
 class LoginActivity : AppCompatActivity() {
 
@@ -17,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var passwordEditText: MaterialAutoCompleteTextView
     private lateinit var loginButton: AppCompatButton
     private lateinit var createAccountTextView: TextView
-    private lateinit var auth: FirebaseAuth // Firebase Authentication instance
+    private lateinit var auth:FirebaseAuth // Firebase Authentication instance
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
