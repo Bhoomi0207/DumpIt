@@ -1,7 +1,5 @@
 package com.example.dumpit.Model
 
-
-
 object ChemicalItemsDataSource {
     val chemicalItems = listOf(
         BiodegradableItem("Hazardous Chemical 1", 8.0),

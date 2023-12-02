@@ -7,7 +7,6 @@ import android.os.Looper
 
 import com.example.dumpit.R
 import android.os.Handler
-import com.example.dumpit.Activities.HomeActivity
 
 
 class splashscreen : AppCompatActivity() {
@@ -17,7 +16,7 @@ class splashscreen : AppCompatActivity() {
                 // Delay for 2 seconds and then start the main activity
         // Delay for 2 seconds and then start the main activity
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, HomeActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }, 2000) // 2000 milliseconds

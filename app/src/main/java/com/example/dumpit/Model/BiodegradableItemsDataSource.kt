@@ -1,7 +1,5 @@
 package com.example.dumpit.Model
 
-
-
 object BiodegradableItemsDataSource {
     val biodegradableItems = listOf(
         BiodegradableItem("Organic Fruit Peels", 2.0),
@@ -27,4 +25,3 @@ object BiodegradableItemsDataSource {
         // Add more items as needed
     )
 }
-
