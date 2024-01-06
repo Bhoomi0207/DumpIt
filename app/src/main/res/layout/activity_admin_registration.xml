@@ -5,67 +5,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#7d774e"
-    tools:context=".registration.RegistrationActivity">
+    tools:context=".registration.AdminRegistrationActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="110dp">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+
             <TextView
-                android:id="@+id/welcomeTextView"
+                android:id="@+id/welcomeAdminTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="36dp"
                 android:elevation="8dp"
-                android:text="Welcome to User Registration"
+                android:text="Welcome to Admin Registration"
                 android:textColor="#C8F4B4"
-                android:textSize="30sp"
-                app:layout_constraintBottom_toTopOf="@+id/appNameTextView"
+                android:textSize="29sp"
+                app:layout_constraintBottom_toTopOf="@+id/adminAppNameTextView"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0"
+                app:layout_constraintVertical_bias="0.585"
                 tools:ignore="HardcodedText" />
 
             <TextView
-                android:id="@+id/appNameTextView"
+                android:id="@+id/adminAppNameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="44dp"
+                android:layout_marginTop="152dp"
                 android:elevation="8dp"
                 android:text="DumpIt"
                 android:textColor="#C8F4B4"
                 android:textSize="43sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Spinner
-                android:id="@+id/spinnerWaste"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="30dp"
-                android:elevation="8dp"
-                android:gravity="center"
-                android:maxLines="1"
-                android:padding="4dp"
-                android:contentDescription="gender_spinner_description"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.495"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/registerUsernameEditText"
-                android:entries="@array/gender_options" />
-
-
+            <!-- Admin Username -->
             <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                android:id="@+id/Waste_typeEditText"
+                android:id="@+id/adminFullNameEditText"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
@@ -84,63 +72,40 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/appNameTextView" />
+                app:layout_constraintTop_toBottomOf="@+id/adminAppNameTextView" />
 
             <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                android:id="@+id/locationEditText"
+                android:id="@+id/adminUsernameEditText"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/edit_text_bg"
-                android:elevation="8dp"
-                android:hint="Address"
-                android:drawableStart="@drawable/ic_home"
-                android:paddingStart="16dp"
-                android:paddingTop="0dp"
-                android:paddingEnd="0dp"
-                android:paddingBottom="0dp"
-                android:textColor="@color/black"
-                android:textColorHint="#72000000"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/spinnerWaste" />
-
-
-            <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                android:id="@+id/registerUsernameEditText"
-                android:layout_width="0dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
                 android:drawableLeft="@drawable/person"
-                android:textColor="@color/black"
-                android:textColorHint="#72000000"
-                android:background="@drawable/edit_text_bg"
                 android:elevation="8dp"
                 android:hint="Username"
                 android:paddingStart="16dp"
                 android:paddingTop="0dp"
                 android:paddingEnd="0dp"
                 android:paddingBottom="0dp"
+                android:textColor="@color/black"
+                android:textColorHint="#72000000"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/QuantityEditText"
-                />
+                app:layout_constraintTop_toBottomOf="@id/adminFullNameEditText" />
 
+            <!-- Admin Email -->
             <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                android:id="@+id/QuantityEditText"
+                android:id="@+id/adminEmailEditText"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
-                android:drawableStart="@drawable/email"
                 android:background="@drawable/edit_text_bg"
+                android:drawableStart="@drawable/email"
                 android:elevation="8dp"
                 android:hint="Email"
                 android:inputType="textEmailAddress"
@@ -153,21 +118,19 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Waste_typeEditText"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/adminUsernameEditText" />
 
-
-
+            <!-- Admin Password -->
             <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                android:id="@+id/approx_priceEditText"
+                android:id="@+id/adminPasswordEditText"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/edit_text_bg"
-                android:elevation="8dp"
                 android:drawableStart="@drawable/lock"
+                android:elevation="8dp"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:paddingStart="16dp"
@@ -179,40 +142,21 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/locationEditText" />
+                app:layout_constraintTop_toBottomOf="@+id/adminEmailEditText" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/registerButton"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="64dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="64dp"
-                android:background="#43570C "
-                android:elevation="12dp"
-                android:paddingStart="16dp"
-                android:paddingTop="0dp"
-                android:paddingEnd="0dp"
-                android:paddingBottom="0dp"
-                android:text="register"
-                android:textColor="#C8F4B4"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/confirmPasswordEditText" />
-
+            <!-- Admin Confirm Password -->
             <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                android:id="@+id/confirmPasswordEditText"
+                android:id="@+id/adminConfirmPasswordEditText"
                 android:layout_width="0dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/edit_text_bg"
+                android:drawableStart="@drawable/lock"
                 android:elevation="8dp"
                 android:hint="Confirm Password"
                 android:inputType="textPassword"
-                android:drawableStart="@drawable/lock"
                 android:paddingStart="16dp"
                 android:paddingTop="0dp"
                 android:paddingEnd="0dp"
@@ -222,25 +166,43 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/approx_priceEditText" />
+                app:layout_constraintTop_toBottomOf="@+id/adminPasswordEditText" />
 
+            <!-- Admin Register Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/adminRegisterButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="64dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="64dp"
+                android:background="#43570C "
+                android:elevation="12dp"
+                android:text="Register"
+                android:textColor="#C8F4B4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/adminConfirmPasswordEditText" />
+
+            <!-- Admin Already Has Account Text -->
             <TextView
-                android:id="@+id/alreadyHasAccountTextView"
+                android:id="@+id/alreadyHasAdminAccountTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="16dp"
                 android:clickable="true"
                 android:focusable="true"
-                android:text="Already have an account! Login here"
-                 android:textColor="#C8F4B4"
-                android:textSize="14sp"
+                android:text="Already have an admin account! Login here"
+                android:textColor="#C8F4B4"
                 android:textColorHint="#72000000"
+                android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.447"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/registerButton"
+                app:layout_constraintTop_toBottomOf="@+id/adminRegisterButton"
                 tools:ignore="TouchTargetSizeCheck" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
